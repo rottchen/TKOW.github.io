@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+
+    <title>The King of Weather</title>
+</head>
+<body>
+        <div id="app">
+            <div class="container">
+                <div class="pt-3">
+                    <h1 class="text-white text-center fst-italic">The King of Weather</h1>
+                </div>
+                
+                <busqueda @data="data = $event"></busqueda>
+               
+                <info-clima v-if="data.main" :data="data"></info-clima>
+                <p v-else class="text-muted text-center pt-4">No se encontraton resultados</p>
+            </div>
+        </div>
+        <footer class="text-center text-white text-lg-start">
+            <div class="text-center p-4">
+            <h2 class="fs-5">Powered by Bruno Rottchen</h2>
+            </div>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+    <script src="componentes/info-clima.js"></script>
+    <script src="componentes/busqueda.js"></script>
+    <script src="js/App.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

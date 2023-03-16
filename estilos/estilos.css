@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+/*#19b8f2*/
+
+:root {
+    --bg-primary: #152544;
+    --bg-secondary: #203864;
+    --text-secondary: rgb(191, 191, 191);
+}
+
+html, #app {
+    background-color: var(--bg-primary);
+    background-color: var(--bg-primary);
+}
+
+.container h1{
+    font-size: 50px;
+}
+
+.busqueda {
+    background-color: var(--bg-primary);
+}
+
+.info-clima {
+    background-color: var(--bg-secondary);
+}
+
+.grados {
+    font-size: 90px;
+}
+
+.ciudad::before {
+    content: "";
+    background-image: url(../imagenes/locacion.png);
+    background-size: contain;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.data-clima {
+    color: var(--text-secondary);
+}
+
+.dias {
+    background-color: var(--bg-secondary);
+}
+
+.dias li{
+    list-style: none;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .2s
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0
+  }
+
+footer{
+    background-color:  var(--bg-secondary);
+}  
